@@ -1,0 +1,5 @@
+10145	Deposited $500.00
+10145	Deposited $500.00
+10145	Withdrew $200.00
+10145	Deposited $500.00
+10145	Withdrew $200.00
