@@ -22,6 +22,11 @@ def Generated_Account_Number():
         if Account_Number not in Account:
             return Account_Number
 
+def Current_Date():
+    Current_Date=datetime.now().strftime("%Y-%m-%d")
+    print(f"Current Date:", Current_Date)
+Current_Date()
+
 def Create_customer():
     customer = get_customer_info()
     Account_number = Generated_Account_Number()
@@ -36,7 +41,7 @@ def Create_customer():
         "Transaction_History": []
     }
     print(f"Account created successfully! Your account number is: {Account_number}")
-
+    print(f"Welcome! customer:{Name}")
     # Saving to files
     with open('customer.txt', 'a') as customer_file, open('user.txt', 'a') as user_file:
         customer_file.write(f"{Account_number},{customer[0]},{customer[1]},{customer[2]},{customer[5]},{customer[6]}\n")
@@ -113,7 +118,10 @@ def Transaction_History():
     for transaction in Transaction:
         print(transaction)
     save_transaction(Account_Number)
-
+#Transaction_ Count#
+# def Transaction_Count():
+#     print(f"Transaction_Count:{len(Account_Numbe)}")
+    
 # ------------------------ Main Menu --------------------------- #
 def Main_Menu():
     while True:
